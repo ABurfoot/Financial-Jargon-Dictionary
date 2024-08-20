@@ -1,0 +1,190 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  .content-container {
+    max-width: 60vw;
+  }
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3vh;
+  font-size: 5em;
+  align-self: center;
+}
+
+.featured-term,
+.search-container,
+.filters,
+.terms-list {
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+.featured-term {
+  background-color: #f0f8ff;
+  border: 0.15vw solid #4682b4;
+  border-radius: 1vw;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+}
+
+.featured-term h2 {
+  color: #4682b4;
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.featured-term h3 {
+  margin-bottom: 1vh;
+  font-size: 1.2em;
+}
+
+.example {
+  background-color: #f0f0f0;
+  border-left: 0.3vw solid #007bff;
+  padding: 2vh 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.example h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.search-container input,
+select {
+  width: 100%;
+  padding: 1vh 1vw;
+  font-size: 1em;
+  border: 0.15vw solid #ccc;
+  border-radius: 0.5vw;
+  box-sizing: border-box;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  width: 48%;
+}
+
+.terms-list {
+  display: grid;
+  gap: 2vh;
+}
+
+.term-item {
+  border: 0.15vw solid #ccc;
+  padding: 2vh 2vw;
+  border-radius: 0.5vw;
+  background-color: #f9f9f9;
+}
+
+.term-item h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.3em;
+}
+
+.term-item p {
+  color: #666;
+  font-size: 1em;
+}
+
+.category-tag,
+.difficulty-tag {
+  display: inline-block;
+  padding: 0.5vh 1vw;
+  border-radius: 2vw;
+  font-size: 0.8em;
+  margin-top: 1vh;
+  margin-right: 1vw;
+}
+
+.category-tag {
+  background-color: #e0e0e0;
+}
+
+.difficulty-tag {
+  background-color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+    margin-bottom: 2vh;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .featured-term h2 {
+    font-size: 1.3em;
+  }
+
+  .featured-term h3 {
+    font-size: 1.1em;
+  }
+
+  .term-item h2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 1vh 1vw;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .featured-term h2 {
+    font-size: 1.2em;
+  }
+
+  .featured-term h3 {
+    font-size: 1em;
+  }
+
+  .term-item h2 {
+    font-size: 1.1em;
+  }
+
+  .category-tag,
+  .difficulty-tag {
+    font-size: 0.7em;
+  }
+}
